@@ -4,174 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alcina - Your Personal Astrology Guide</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
-            color: #e8e8e8;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: rgba(0, 0, 0, 0.8);
-            color: #ffffff;
-            padding: 20px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .hero {
-            padding: 120px 0 80px;
-            text-align: center;
-            color: white;
-        }
-        
-        .hero h2 {
-            font-size: 3.5rem;
-            color: #ffffff;
-            text-shadow: 
-                0 0 20px rgba(255, 255, 255, 0.8),
-                0 0 40px rgba(168, 136, 255, 0.6),
-                0 0 60px rgba(255, 136, 255, 0.4);
-            margin-bottom: 20px;
-            /* Fallback for Chrome - use text-shadow instead of gradient text */
-            background: linear-gradient(45deg, #ffffff, #a8a8ff, #ffa8ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Chrome fallback */
-        @supports not (-webkit-background-clip: text) {
-            .hero h2 {
-                background: none;
-                -webkit-text-fill-color: initial;
-                color: #ffffff;
-                text-shadow: 
-                    0 0 20px rgba(255, 255, 255, 0.8),
-                    0 0 40px rgba(168, 136, 255, 0.6),
-                    0 0 60px rgba(255, 136, 255, 0.4);
-            }
-        }
-        
-        .btn {
-            padding: 15px 30px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            margin: 10px;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(45deg, #8b5cf6, #a855f7, #c084fc);
-            color: white;
-            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
-        }
-        
-        .features {
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-            color: white;
-            padding: 80px 0;
-        }
-        
-        .feature-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 40px 20px;
-            margin: 20px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
-            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
-            border-color: rgba(139, 92, 246, 0.4);
-        }
-    </style>
+    <meta name="description" content="Get your daily horoscope, personalized astrology readings, and cosmic insights with Alcina. Available as a Chrome extension.">
+    <link rel="icon" type="image/png" href="images/landing_logo.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav class="container">
             <div class="logo">
-                <img src="images/landing_logo.png" alt="Alcina Logo" style="height: 40px;">
-                <h1 style="color: white; display: inline; margin-left: 15px;">Alcina</h1>
+                <img src="images/landing_logo.png" alt="Alcina Logo">
+                <h1>Alcina</h1>
             </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h2>Your Personal Astrology Guide</h2>
-            <p>Discover your cosmic destiny with personalized daily horoscopes, detailed birth chart analysis, and mystical insights delivered directly to your browser.</p>
+            <h2 class="fade-in-up">Your Personal Astrology Guide</h2>
+            <p class="fade-in-up">Discover your cosmic destiny with personalized daily horoscopes, with Sun and Ascendant dailyreadings, and mystical insights delivered directly to your browser.</p>
             
-            <div>
-                <a href="#download" class="btn btn-primary">Get Started Free</a>
-                <a href="#features" class="btn btn-primary">Learn More</a>
+            <div class="fade-in-up">
+                <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer">
+                    <img src="images/available_in_chrome_web_store.png" alt="Available in Chrome Web Store" class="chrome-store-btn">
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
-            <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Why Choose Alcina?</h3>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 60px;">Experience the most accurate and personalized astrology readings available</p>
+            <h3>Why Choose Alcina?</h3>
+            <p>Experience the most accurate and personalized astrology readings available</p>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            <div class="features-grid">
                 <div class="feature-card">
-                    <div style="font-size: 3rem; margin-bottom: 20px;">🔮</div>
-                    <h4 style="font-size: 1.5rem; margin-bottom: 15px; color: #ffffff;">Daily Horoscopes</h4>
+                    <div class="feature-icon">🔮</div>
+                    <h4>Daily Horoscopes</h4>
                     <p>Get personalized daily horoscopes based on your exact birth data and current planetary positions for maximum accuracy.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div style="font-size: 3rem; margin-bottom: 20px;">⭐</div>
-                    <h4 style="font-size: 1.5rem; margin-bottom: 15px; color: #ffffff;">Birth Chart Analysis</h4>
-                    <p>Discover your unique astrological profile with detailed birth chart interpretations and planetary influences.</p>
+                    <div class="feature-icon">⭐</div>
+                    <h4>Asendant Reading</h4>
+                    <p>Ascendant reading is a reading that is based on the ascendant sign of the user. This is the sign that is rising in the east at the time of birth.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div style="font-size: 3rem; margin-bottom: 20px;">🌙</div>
-                    <h4 style="font-size: 1.5rem; margin-bottom: 15px; color: #ffffff;">Moon Phases</h4>
-                    <p>Track lunar cycles and their impact on your daily life with moon phase guidance and timing recommendations.</p>
+                    <div class="feature-icon">🎯</div>
+                    <h4>Precision Timing</h4>
+                    <p>Get readings based on your exact birth time and location for the most accurate astrological insights possible.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h3>How It Works</h3>
+            <p>Get started with Alcina in just three simple steps</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Install Extension</h4>
+                    <p>Add the Alcina Chrome extension to your browser with one click from the Chrome Web Store.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Create Your Profile</h4>
+                    <p>Enter your birth details including date, time, and location to generate your personalized astrological profile.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Get Daily Insights</h4>
+                    <p>Receive your personalized daily horoscope and cosmic guidance directly in your browser every morning.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: #e8e8e8; padding: 40px 0; text-align: center;">
+    <!-- Download Section -->
+    <section class="features" id="download">
         <div class="container">
-            <p>&copy; 2024 Alcina. All rights reserved.</p>
+            <h3>Ready to Begin Your Cosmic Journey?</h3>
+            <p>Join thousands of users who trust Alcina for their daily astrological guidance</p>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer">
+                    <img src="images/available_in_chrome_web_store.png" alt="Available in Chrome Web Store" class="chrome-store-btn">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <p>&copy; 2024 Alcina. All rights reserved.</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
