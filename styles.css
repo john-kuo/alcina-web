@@ -63,7 +63,7 @@ nav {
 
 .hero h2 {
     font-size: 3.5rem;
-    color: #ffffff;
+    color: #ffffff !important;
     margin-bottom: 20px;
     position: relative;
     /* Chrome-compatible gradient text using multiple text shadows */
@@ -73,7 +73,7 @@ nav {
         0 0 30px rgba(168, 136, 255, 0.6),
         0 0 40px rgba(168, 136, 255, 0.4),
         0 0 50px rgba(255, 136, 255, 0.3),
-        0 0 60px rgba(255, 136, 255, 0.2);
+        0 0 60px rgba(255, 136, 255, 0.2) !important;
 }
 
 /* Enhanced gradient effect for browsers that support it */
