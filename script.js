@@ -12,7 +12,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add scroll effect to header
+// Add scroll effect to header - makes it darker and more noticeable when scrolling
 window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
     if (window.scrollY > 100) {
