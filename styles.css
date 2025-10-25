@@ -99,16 +99,7 @@ nav {
         0 0 60px rgba(255, 136, 255, 0.2) !important;
 }
 
-/* Enhanced gradient effect for browsers that support it */
-/* @supports (-webkit-background-clip: text) {
-    .hero h2 {
-        background: linear-gradient(45deg, #ffffff, #a8a8ff, #ffa8ff, #ffffff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-shadow: none;
-    }
-} */
+
 
 
 .hero p {
