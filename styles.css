@@ -1,4 +1,20 @@
 /* Complete Mystical Dark Theme CSS - Chrome Compatible */
+
+/* Custom Font - Coldiac */
+@font-face {
+    font-family: 'Coldiac';
+    src: url('fonts/ColdiacFree-Regular/Coldiac.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Coldiac';
+    src: url('fonts/ColdiacFree-Regular/Coldiac Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +24,7 @@
 body {
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
     color: #e8e8e8;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Coldiac', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
