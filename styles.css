@@ -64,28 +64,43 @@ nav {
 .hero h2 {
     font-size: 3.5rem;
     color: #ffffff;
-    text-shadow: 
-        0 0 20px rgba(255, 255, 255, 0.8),
-        0 0 40px rgba(168, 136, 255, 0.6),
-        0 0 60px rgba(255, 136, 255, 0.4);
     margin-bottom: 20px;
-    /* Fallback for Chrome - use text-shadow instead of gradient text */
-    background: linear-gradient(45deg, #ffffff, #a8a8ff, #ffa8ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    position: relative;
+    /* Chrome-compatible gradient text using multiple text shadows */
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.9),
+        0 0 20px rgba(255, 255, 255, 0.7),
+        0 0 30px rgba(168, 136, 255, 0.6),
+        0 0 40px rgba(168, 136, 255, 0.4),
+        0 0 50px rgba(255, 136, 255, 0.3),
+        0 0 60px rgba(255, 136, 255, 0.2);
 }
 
-/* Chrome fallback */
+/* Enhanced gradient effect for browsers that support it */
+@supports (-webkit-background-clip: text) {
+    .hero h2 {
+        background: linear-gradient(45deg, #ffffff, #a8a8ff, #ffa8ff, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: none;
+    }
+}
+
+/* Chrome-specific enhancement */
 @supports not (-webkit-background-clip: text) {
     .hero h2 {
-        background: none;
-        -webkit-text-fill-color: initial;
-        color: #ffffff;
+        background: linear-gradient(45deg, #ffffff, #a8a8ff, #ffa8ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        /* Fallback text shadow for Chrome */
         text-shadow: 
-            0 0 20px rgba(255, 255, 255, 0.8),
-            0 0 40px rgba(168, 136, 255, 0.6),
-            0 0 60px rgba(255, 136, 255, 0.4);
+            0 0 10px rgba(255, 255, 255, 0.9),
+            0 0 20px rgba(255, 255, 255, 0.7),
+            0 0 30px rgba(168, 136, 255, 0.6),
+            0 0 40px rgba(168, 136, 255, 0.4),
+            0 0 50px rgba(255, 136, 255, 0.3);
     }
 }
 
