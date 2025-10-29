@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcina - Marquee Promo Tile (1400x560)</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 4.3vw;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .left-section {
+            flex: 1;
+            max-width: 600px;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            width: 7.1vw;
+            height: 7.1vw;
+            background: linear-gradient(45deg, #8b5cf6, #a855f7, #c084fc);
+            border-radius: 1.8vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.1vw;
+            font-weight: bold;
+            margin-right: 2.1vw;
+            box-shadow: 0 1.1vw 2.9vw rgba(139, 92, 246, 0.4);
+        }
+        
+        .title-section h1 {
+            font-size: 2.5vw;
+            font-weight: bold;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ffffff, #e8e8e8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        
+        .subtitle {
+            font-size: 1vw;
+            color: #b8b8b8;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .feature-icon {
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .feature-text {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        .cta-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #8b5cf6, #a855f7);
+            color: white;
+            border: none;
+            padding: 18px 36px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.6);
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            color: #ffd700;
+        }
+        
+        .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .extension-preview {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 40px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 25px 50px rgba(139, 92, 246, 0.2);
+            max-width: 500px;
+            text-align: center;
+        }
+        
+        .preview-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        
+        .preview-content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .zodiac-sign {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .reading-text {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #e8e8e8;
+        }
+        
+        .navigation {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .nav-btn {
+            padding: 8px 16px;
+            background: rgba(139, 92, 246, 0.3);
+            border: 1px solid rgba(139, 92, 246, 0.5);
+            border-radius: 20px;
+            color: white;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: rgba(139, 92, 246, 0.5);
+        }
+        
+        .stars {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 1.5rem;
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    
+    <div class="content">
+        <div class="left-section">
+            <div class="logo-section">
+                <div class="logo">A</div>
+                <div class="title-section">
+                    <h1>Alcina</h1>
+                    <p class="subtitle">Your Personal Astrology Guide</p>
+                </div>
+            </div>
+            
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">🔮</span>
+                    <span class="feature-text">Daily Horoscopes</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">⭐</span>
+                    <span class="feature-text">Ascendant Reading</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🎯</span>
+                    <span class="feature-text">Precision Timing</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">📱</span>
+                    <span class="feature-text">Easy Setup</span>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <button class="cta-button">Get Your Reading</button>
+                <div class="rating">
+                    <span>⭐⭐⭐⭐⭐</span>
+                    <span>4.8/5 Rating</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-section">
+            <div class="extension-preview">
+                <div class="preview-title">Today's Reading</div>
+                <div class="preview-content">
+                    <div class="zodiac-sign">♊ Gemini</div>
+                    <div class="reading-text">
+                        Today brings opportunities for communication and connection. 
+                        Your natural curiosity will lead to meaningful conversations 
+                        and new insights.
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="nav-btn">Daily</button>
+                    <button class="nav-btn">Tomorrow</button>
+                    <button class="nav-btn">Weekly</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

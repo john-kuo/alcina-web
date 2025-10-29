@@ -1,5 +1,5 @@
 // Configuration
-const is_production = false; // Set to true for production
+const is_production = true; // Set to true for production
 
 const CONFIG = {
     API_BASE_URL: is_production 

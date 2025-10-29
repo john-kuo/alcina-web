@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcina Extension Screenshots</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+        
+        .screenshot-container {
+            width: 1280px;
+            height: 800px;
+            margin: 20px auto;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .browser-header {
+            background: #2d2d2d;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 1px solid #444;
+        }
+        
+        .browser-controls {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .browser-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .close { background: #ff5f57; }
+        .minimize { background: #ffbd2e; }
+        .maximize { background: #28ca42; }
+        
+        .url-bar {
+            flex: 1;
+            margin: 0 20px;
+            height: 24px;
+            background: #1a1a1a;
+            border: 1px solid #444;
+            border-radius: 12px;
+            padding: 0 12px;
+            color: #ccc;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .extension-icon {
+            width: 24px;
+            height: 24px;
+            margin-left: auto;
+            background: linear-gradient(45deg, #8b5cf6, #a855f7);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .content-area {
+            padding: 40px;
+            height: calc(100% - 40px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .extension-popup {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .app-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #8b5cf6, #a855f7, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .feature-list {
+            text-align: left;
+            margin: 20px 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        
+        .feature-icon {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #8b5cf6, #a855f7);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4);
+        }
+        
+        .screenshot-title {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Screenshot 1: Main Extension Popup -->
+    <div class="screenshot-container">
+        <div class="screenshot-title">Screenshot 1: Daily Horoscope Popup</div>
+        <div class="browser-header">
+            <div class="browser-controls">
+                <div class="browser-btn close"></div>
+                <div class="browser-btn minimize"></div>
+                <div class="browser-btn maximize"></div>
+            </div>
+            <div class="url-bar">https://example.com</div>
+            <div class="extension-icon">A</div>
+        </div>
+        <div class="content-area">
+            <div class="extension-popup">
+                <div class="app-title">Alcina</div>
+                <div style="font-size: 14px; margin-bottom: 20px; color: #ccc;">Your Personal Astrology Guide</div>
+                
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 10px; margin: 15px 0;">
+                    <div style="font-size: 12px; color: #999; margin-bottom: 5px;">Today's Reading</div>
+                    <div style="font-size: 16px; font-weight: bold;">Gemini ♊</div>
+                    <div style="font-size: 14px; margin-top: 10px; line-height: 1.4;">
+                        Today brings opportunities for communication and connection. 
+                        Your natural curiosity will lead to meaningful conversations.
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 10px; margin: 15px 0;">
+                    <button style="flex: 1; padding: 8px; background: rgba(139, 92, 246, 0.3); border: 1px solid rgba(139, 92, 246, 0.5); border-radius: 8px; color: white; font-size: 12px;">Daily</button>
+                    <button style="flex: 1; padding: 8px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: white; font-size: 12px;">Tomorrow</button>
+                    <button style="flex: 1; padding: 8px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: white; font-size: 12px;">Weekly</button>
+                </div>
+                
+                <button class="cta-button">Get Your Reading</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screenshot 2: Features Overview -->
+    <div class="screenshot-container">
+        <div class="screenshot-title">Screenshot 2: Key Features</div>
+        <div class="browser-header">
+            <div class="browser-controls">
+                <div class="browser-btn close"></div>
+                <div class="browser-btn minimize"></div>
+                <div class="browser-btn maximize"></div>
+            </div>
+            <div class="url-bar">https://alcina-web.vercel.app</div>
+            <div class="extension-icon">A</div>
+        </div>
+        <div class="content-area">
+            <div style="max-width: 800px; text-align: center;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 30px; background: linear-gradient(45deg, #8b5cf6, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Why Choose Alcina?</h1>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px;">
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">🔮</div>
+                        <h3 style="margin-bottom: 15px;">Daily Horoscopes</h3>
+                        <p style="font-size: 14px; color: #ccc;">Personalized readings based on your exact birth data</p>
+                    </div>
+                    
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">⭐</div>
+                        <h3 style="margin-bottom: 15px;">Ascendant Reading</h3>
+                        <p style="font-size: 14px; color: #ccc;">Detailed analysis of your rising sign</p>
+                    </div>
+                    
+                    <div style="background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">🎯</div>
+                        <h3 style="margin-bottom: 15px;">Precision Timing</h3>
+                        <p style="font-size: 14px; color: #ccc;">Accurate readings based on birth time and location</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screenshot 3: Installation Process -->
+    <div class="screenshot-container">
+        <div class="screenshot-title">Screenshot 3: Easy Installation</div>
+        <div class="browser-header">
+            <div class="browser-controls">
+                <div class="browser-btn close"></div>
+                <div class="browser-btn minimize"></div>
+                <div class="browser-btn maximize"></div>
+            </div>
+            <div class="url-bar">https://chrome.google.com/webstore</div>
+            <div class="extension-icon">A</div>
+        </div>
+        <div class="content-area">
+            <div style="max-width: 600px; text-align: center;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 30px;">Get Started in 3 Steps</h1>
+                
+                <div style="display: flex; flex-direction: column; gap: 30px; margin-top: 40px;">
+                    <div style="display: flex; align-items: center; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px;">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(45deg, #8b5cf6, #a855f7); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-weight: bold;">1</div>
+                        <div>
+                            <h3 style="margin-bottom: 5px;">Install Extension</h3>
+                            <p style="color: #ccc; font-size: 14px;">Add Alcina to your browser with one click</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px;">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(45deg, #8b5cf6, #a855f7); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-weight: bold;">2</div>
+                        <div>
+                            <h3 style="margin-bottom: 5px;">Create Your Profile</h3>
+                            <p style="color: #ccc; font-size: 14px;">Enter your birth details for personalized readings</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px;">
+                        <div style="width: 40px; height: 40px; background: linear-gradient(45deg, #8b5cf6, #a855f7); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-weight: bold;">3</div>
+                        <div>
+                            <h3 style="margin-bottom: 5px;">Get Daily Insights</h3>
+                            <p style="color: #ccc; font-size: 14px;">Receive your personalized horoscope every morning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screenshot 4: Profile Setup -->
+    <div class="screenshot-container">
+        <div class="screenshot-title">Screenshot 4: Profile Setup</div>
+        <div class="browser-header">
+            <div class="browser-controls">
+                <div class="browser-btn close"></div>
+                <div class="browser-btn minimize"></div>
+                <div class="browser-btn maximize"></div>
+            </div>
+            <div class="url-bar">chrome-extension://alcina</div>
+            <div class="extension-icon">A</div>
+        </div>
+        <div class="content-area">
+            <div class="extension-popup" style="max-width: 500px;">
+                <div class="app-title">Setup Your Profile</div>
+                <div style="font-size: 14px; margin-bottom: 30px; color: #ccc;">Enter your birth details for accurate readings</div>
+                
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-size: 14px; color: #ccc;">Birth Date</label>
+                        <input type="date" style="width: 100%; padding: 12px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: white;">
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-size: 14px; color: #ccc;">Birth Time</label>
+                        <input type="time" style="width: 100%; padding: 12px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: white;">
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-size: 14px; color: #ccc;">Birth Location</label>
+                        <input type="text" placeholder="City, Country" style="width: 100%; padding: 12px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: white;">
+                    </div>
+                </div>
+                
+                <button class="cta-button" style="width: 100%; margin-top: 30px;">Save Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screenshot 5: Weekly Reading -->
+    <div class="screenshot-container">
+        <div class="screenshot-title">Screenshot 5: Weekly Overview</div>
+        <div class="browser-header">
+            <div class="browser-controls">
+                <div class="browser-btn close"></div>
+                <div class="browser-btn minimize"></div>
+                <div class="browser-btn maximize"></div>
+            </div>
+            <div class="url-bar">chrome-extension://alcina</div>
+            <div class="extension-icon">A</div>
+        </div>
+        <div class="content-area">
+            <div class="extension-popup" style="max-width: 600px;">
+                <div class="app-title">Weekly Reading</div>
+                <div style="font-size: 14px; margin-bottom: 20px; color: #ccc;">Dec 16 - Dec 22, 2024</div>
+                
+                <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin: 20px 0;">
+                    <div style="text-align: center; padding: 10px; background: rgba(139, 92, 246, 0.2); border-radius: 8px;">
+                        <div style="font-size: 12px; color: #ccc;">Mon</div>
+                        <div style="font-size: 18px; margin: 5px 0;">16</div>
+                        <div style="font-size: 12px;">⭐⭐⭐⭐</div>
+                    </div>
+                    <div style="text-align: center; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
+                        <div style="font-size: 12px; color: #ccc;">Tue</div>
+                        <div style="font-size: 18px; margin: 5px 0;">17</div>
+                        <div style="font-size: 12px;">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div style="text-align: center; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
+                        <div style="font-size: 12px; color: #ccc;">Wed</div>
+                        <div style="font-size: 18px; margin: 5px 0;">18</div>
+                        <div style="font-size: 12px;">⭐⭐⭐</div>
+                    </div>
+                    <div style="text-align: center; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
+                        <div style="font-size: 12px; color: #ccc;">Thu</div>
+                        <div style="font-size: 18px; margin: 5px 0;">19</div>
+                        <div style="font-size: 12px;">⭐⭐⭐⭐</div>
+                    </div>
+                    <div style="text-align: center; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
+                        <div style="font-size: 12px; color: #ccc;">Fri</div>
+                        <div style="font-size: 18px; margin: 5px 0;">20</div>
+                        <div style="font-size: 12px;">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div style="text-align: center; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
+                        <div style="font-size: 12px; color: #ccc;">Sat</div>
+                        <div style="font-size: 18px; margin: 5px 0;">21</div>
+                        <div style="font-size: 12px;">⭐⭐⭐</div>
+                    </div>
+                    <div style="text-align: center; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
+                        <div style="font-size: 12px; color: #ccc;">Sun</div>
+                        <div style="font-size: 18px; margin: 5px 0;">22</div>
+                        <div style="font-size: 12px;">⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <h3 style="margin-bottom: 15px;">This Week's Theme</h3>
+                    <p style="font-size: 14px; line-height: 1.6; color: #ccc;">
+                        A week of transformation and growth. Focus on communication and 
+                        building meaningful connections. Tuesday and Friday show particular 
+                        promise for important conversations.
+                    </p>
+                </div>
+                
+                <button class="cta-button">View Daily Details</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactivity for demonstration
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.cta-button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "alcina-web",
+  "version": "1.0.0",
+  "description": "User profile creation page for Alcina horoscope application",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "serve": "python3 -m http.server 8080",
+    "dev": "python -m http.server 8080"
+  },
+  "keywords": [
+    "horoscope",
+    "astrology",
+    "profile",
+    "web",
+    "form"
+  ],
+  "author": "Alcina Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/alcina-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/alcina-web/issues"
+  },
+  "homepage": "https://github.com/your-username/alcina-web#readme"
+}

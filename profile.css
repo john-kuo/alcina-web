@@ -281,6 +281,164 @@ body {
     box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
 }
 
+/* Extension Instructions */
+.extension-instructions {
+    margin: 30px 0;
+    text-align: left;
+}
+
+.instruction-step {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.instruction-step h4 {
+    color: #27ae60;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.instruction-step p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.instruction-image {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.instruction-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.instruction-img:hover {
+    transform: scale(1.02);
+}
+
+/* Autocomplete Styles */
+.autocomplete-container {
+    position: relative;
+    width: 100%;
+}
+
+.autocomplete-input {
+    width: 100%;
+}
+
+.autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.autocomplete-dropdown.show {
+    display: block;
+}
+
+.autocomplete-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.autocomplete-item:hover {
+    background-color: #f8f9fa;
+}
+
+.autocomplete-item:last-child {
+    border-bottom: none;
+}
+
+.autocomplete-item .location-name {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.autocomplete-item .location-details {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.autocomplete-loading {
+    padding: 12px 16px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.autocomplete-no-results {
+    padding: 12px 16px;
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
+
+/* Ascendant Sign Information Styles */
+.ascendant-info {
+    margin-top: 15px;
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.info-icon {
+    font-size: 1.2rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.info-content h4 {
+    color: #27ae60;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.info-content p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 4px 0;
+}
+
+.info-content strong {
+    color: #333;
+    font-weight: 600;
+}
+
 /* Footer */
 .footer {
     text-align: center;
