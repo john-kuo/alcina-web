@@ -91,6 +91,18 @@ document.addEventListener('DOMContentLoaded', function() {
     setupFormValidation();
     initializeAutocomplete();
     
+    // If success flag is present, show success message immediately (used after onInstalled)
+    const urlParams = new URLSearchParams(window.location.search);
+    const successFlag = urlParams.get('success');
+    if (successFlag === '1' || successFlag === 'true') {
+        // Hide form and show success instructions
+        if (form && successMessage) {
+            form.style.display = 'none';
+            successMessage.style.display = 'block';
+        }
+        return;
+    }
+
     // Check if email is provided in URL
     const email = getEmailFromUrl();
     if (!email) {
